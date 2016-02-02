@@ -1,7 +1,7 @@
 //import {Storage, SqlStorage} from 'lib/ionic/ionic';
 
 angular.module('starter')
-  .controller('LoginController', function($scope,$cordovaSQLite) {
+  .controller('LoginController', function($scope,$cordovaSQLite,$state) {
     // $scope.user.password = 'ffff';
     // $scope.user.username = 'kkkk';
 
@@ -36,5 +36,6 @@ angular.module('starter')
       console.log(user.password);
       $scope.insert(user.username,user.password);
       $scope.select(user.password);
+      $state.go('home.cash');
     };
   });

@@ -33,14 +33,32 @@ angular.module('starter', ['ionic', 'ngCordova'])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider.state('home', {
       url: '/home',
+      abstract: true,
       templateUrl: 'views/home/home.html'
     })
     .state('login', {
       url: '/login',
       controller: 'LoginController',
       templateUrl: 'views/login/login.html'
+    })
+    .state('home.cash', {
+      url: '/home/cash',
+      //controller: 'RootController',
+      views: {
+        'appContent' :{
+          templateUrl: "views/cash/cash.html",
+          controller : "HomeController"
+        }
+      }
+      // templateUrl: 'views/cash/cash.html'
     });
 
   console.log('config');
   $urlRouterProvider.otherwise('login');
+})
+
+.controller('RootController', function($scope, $ionicSideMenuDelegate) {
+  $scope.toggleLeft = function() {
+    $ionicSideMenuDelegate.toggleLeft();
+  };
 })
