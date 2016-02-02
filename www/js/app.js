@@ -42,7 +42,7 @@ angular.module('starter', ['ionic', 'ngCordova'])
       templateUrl: 'views/login/login.html'
     })
     .state('home.cash', {
-      url: '/home/cash',
+      url: '/cash',
       //controller: 'RootController',
       views: {
         'appContent' :{
@@ -51,7 +51,18 @@ angular.module('starter', ['ionic', 'ngCordova'])
         }
       }
       // templateUrl: 'views/cash/cash.html'
-    });
+    })
+    .state('home.help', {
+      url: '/help',
+      //controller: 'RootController',
+      views: {
+        'appContent' :{
+          templateUrl: "views/help/help.html",
+          controller : "HomeController"
+        }
+      }
+      // templateUrl: 'views/cash/cash.html'
+    });;
 
   console.log('config');
   $urlRouterProvider.otherwise('login');
