@@ -43,11 +43,10 @@ angular.module('starter', ['ionic', 'ngCordova'])
     })
     .state('home.cash', {
       url: '/cash',
-      //controller: 'RootController',
       views: {
         'appContent' :{
           templateUrl: "views/cash/cash.html",
-          controller : "HomeController"
+          controller : "CashController"
         }
       }
       // templateUrl: 'views/cash/cash.html'
