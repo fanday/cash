@@ -7,7 +7,6 @@ angular.module('starter')
     console.log(height);
     $scope.style = {
       color: 'red',
-      background: 'green',
       width: '27%',
       height: '100%',
     };

@@ -7,3 +7,8 @@
   width: 30%;
   margin:0 auto;
 }
+
+.cash-bottom {  
+       position: fixed; /*or前面的是absolute就可以用*/
+       bottom: 0px;
+}
