@@ -5,7 +5,6 @@
 // the 2nd parameter is an array of 'requires'
 
 //reference URL:https://blog.nraboy.com/2014/11/use-sqlite-instead-local-storage-ionic-framework/
-var db = null;
 angular.module('starter', ['ionic', 'ngCordova'])
 
 .run(function($ionicPlatform,$cordovaSQLite) {
@@ -23,10 +22,7 @@ angular.module('starter', ['ionic', 'ngCordova'])
     if (window.StatusBar) {
       StatusBar.styleDefault();
     }
-
-    db = $cordovaSQLite.openDB("my.db");
-    $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS people (id integer primary key, firstname text, lastname text)");
-    //$cordovaSQLite.deleteDB("my.db");
+    
   });
 })
 
@@ -47,6 +43,16 @@ angular.module('starter', ['ionic', 'ngCordova'])
         'appContent' :{
           templateUrl: "views/cash/cash.html",
           controller : "CashController"
+        }
+      }
+      // templateUrl: 'views/cash/cash.html'
+    })
+    .state('home.managedishes', {
+      url: '/managedishes',
+      views: {
+        'appContent' :{
+          templateUrl: "views/manage_dishes/manage_dishes.html",
+          controller : "HomeController"
         }
       }
       // templateUrl: 'views/cash/cash.html'

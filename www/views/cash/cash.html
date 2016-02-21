@@ -1,44 +1,33 @@
 <ion-view title="Ionic Shopping Checkout">
   <ion-content padding="false" scroll="false">
-    <div ng-style="style">
-      <h3>{{date}} {{hours}}:{{minutes}}:{{seconds}}</h3>
-
-      <div class="list">
-
-        <label class="item item-input item-select">
-          <div class="input-label">
-            芒果汁
-          </div>
-          <select>
-            <option>取消</option>
-            <option selected>1</option>
-            <option>2</option>
-          </select>
-        </label>
-
+    <div ng-style="style" >
+      <div class="cash-bottom" style="width:27%;" padding="false">
+        <!-- <ul class="list">
+          <li class="item">
+            <button class="button button-balanced" style="width:100%" padding="false">
+        下单
+      </button>
+          </li>
+          <li class="item">
+            <button class="button button-energized" style="width:100%">
+              钱箱
+            </button>
+          </li>
+      </ul> -->
+        <button class="button button-full button-positive" style="font-size: 200%">
+          下单
+        </button>
+        <button class="button button-full button-positive" style="font-size: 200%" ng-click="data()">
+          钱箱
+        </button>
       </div>
 
-<div class="cash-bottom" style="width:27%;" padding="false">
-  <!-- <ul class="list">
-    <li class="item">
-      <button class="button button-balanced" style="width:100%" padding="false">
-  下单
-</button>
-    </li>
-    <li class="item">
-      <button class="button button-energized" style="width:100%">
-        钱箱
-      </button>
-    </li>
-</ul> -->
-<button class="button button-full button-positive">
-  下单
-</button>
-<button class="button button-full button-positive">
-  钱箱
-</button>
     </div>
-    <div>
+
+    <div style="width:73%;height:100%;position:absolute;left:27%;top:0px;background:red">
+      <p>hhhhh</p>
+      <h3>{{date}} {{hours}}:{{minutes}}:{{seconds}}</h3>
+
     </div>
   </ion-content>
 </ion-view>
